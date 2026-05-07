@@ -56,10 +56,50 @@ const output2 = reverseString("typescript")
 
 
 
-// =========================== solution-2 ===========================
+// =========================== solution-3 ===========================
+
+type StringOrNumber = string | number;
+
+const checkType = (input: StringOrNumber): "String" | "Number" =>{
+    if(typeof input === "string"){
+        return "String";
+    }
+    if(typeof input === "number"){
+        return "Number";
+    }
+throw new Error("Invalid input");
+
+}
+const output3 = checkType(56); // "String"
+// console.log(output3); 
+
+
+
+// Another Solution of Problem-3
+// type StringOrNumber = string | number;
+
+// const checkType = (input: StringOrNumber): string => {
+//     if (typeof input === "string") {
+//         return '"String";';
+//     }
+
+//     if (typeof input === "number") {
+//         return '"Number";';
+//     }
+
+//     throw new Error("Invalid input");
+// };
+
+// const output = checkType("Hello"); 
+// console.log(output);
 
 
 
 
+
+
+
+
+// =========================== solution-4 ===========================
 
 
