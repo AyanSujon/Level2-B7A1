@@ -1,7 +1,7 @@
 <!-- Blog-2 -->
 
-````md
-# Using Pick and Omit in TypeScript to Avoid Code Duplication (DRY Principle)
+
+# Using `Pick` and `Omit` in TypeScript to Avoid Code Duplication (DRY Principle)
 
 ## Introduction
 
