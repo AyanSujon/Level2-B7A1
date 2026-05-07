@@ -102,4 +102,17 @@ const output3 = checkType(56); // "String"
 
 // =========================== solution-4 ===========================
 
+function getProperty<ObjectType, KeyType extends keyof ObjectType>(
+    obj: ObjectType,
+    key: KeyType
+): ObjectType[KeyType] {
+    return obj[key];
+}
+
+// Sample Input:
+const user = { id: 1, name: "John Doe", age: 21 };
+
+const output4 = getProperty(user, "name") // "John Doe"
+console.log(output4); 
+
 
