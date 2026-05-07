@@ -60,14 +60,14 @@ const output2 = reverseString("typescript")
 
 type StringOrNumber = string | number;
 
-const checkType = (input: StringOrNumber): string =>{
-    if(typeof input === "string"){
+const checkType = (input: StringOrNumber): string => {
+    if (typeof input === "string") {
         return "String";
     }
-    if(typeof input === "number"){
+    if (typeof input === "number") {
         return "Number";
     }
-throw new Error("Invalid input");
+    throw new Error("Invalid input");
 
 }
 const output3 = checkType("Hello"); // "String"
@@ -129,13 +129,13 @@ const output4 = getProperty(user, "name") // "John Doe"
 
 
 interface Book {
-  title: string;
-  author: string;
-  publishedYear: number;
+    title: string;
+    author: string;
+    publishedYear: number;
 }
 
 const toggleReadStatus = (book: Book) => {
-        // Check if input is an object
+    // Check if input is an object
     if (typeof book !== "object" || book === null) {
         throw new Error("Input must be a valid book object");
     }
@@ -155,7 +155,7 @@ const toggleReadStatus = (book: Book) => {
         throw new Error("Published year must be a number");
     }
 
-    return {...book, isRead: true};
+    return { ...book, isRead: true };
 };
 
 // Sample Input:
@@ -164,6 +164,131 @@ const myBook = { title: "TypeScript Guide", author: "Jane Doe", publishedYear: 2
 const output5 = toggleReadStatus(myBook);
 
 // console.log(output5)
+
+
+
+
+
+
+// =========================== solution-6 ===========================
+
+
+
+class Person {
+    name: string;
+    age: number;
+
+    constructor(name: string, age: number) {
+
+        // Error handling
+        if (typeof name !== "string" || name.trim() === "") {
+            throw new Error("Name must be a valid string");
+        }
+
+        if (typeof age !== "number" || age < 0) {
+            throw new Error("Age must be a valid positive number");
+        }
+
+        this.name = name;
+        this.age = age;
+    }
+}
+
+
+class Student extends Person {
+    grade: string;
+
+    constructor(name: string, age: number, grade: string) {
+        super(name, age); // call parent constructor
+
+        // Error handling
+        if (typeof grade !== "string" || grade.trim() === "") {
+            throw new Error("Grade must be a valid string");
+        }
+
+        this.grade = grade;
+    }
+
+    getDetails(): string {
+        const result = `Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}`;
+        return result;
+    }
+}
+
+// Sample Input
+const student = new Student("Alice", 20, "A");
+
+// Sample Output
+const output6 = student.getDetails();
+// console.log( output6);
+
+
+
+
+
+
+
+
+
+
+// =========================== solution-7 ===========================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
