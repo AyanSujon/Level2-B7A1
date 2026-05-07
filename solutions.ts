@@ -128,9 +128,42 @@ const output4 = getProperty(user, "name") // "John Doe"
 
 
 
+interface Book {
+  title: string;
+  author: string;
+  publishedYear: number;
+}
 
+const toggleReadStatus = (book: Book) => {
+        // Check if input is an object
+    if (typeof book !== "object" || book === null) {
+        throw new Error("Input must be a valid book object");
+    }
 
+    // Validate title
+    if (typeof book.title !== "string") {
+        throw new Error("Title must be a string");
+    }
 
+    // Validate author
+    if (typeof book.author !== "string") {
+        throw new Error("Author must be a string");
+    }
+
+    // Validate publishedYear
+    if (typeof book.publishedYear !== "number") {
+        throw new Error("Published year must be a number");
+    }
+
+    return {...book, isRead: true};
+};
+
+// Sample Input:
+const myBook = { title: "TypeScript Guide", author: "Jane Doe", publishedYear: 2024 };
+
+const output5 = toggleReadStatus(myBook);
+
+// console.log(output5)
 
 
 
