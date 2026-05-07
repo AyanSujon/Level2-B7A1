@@ -218,7 +218,6 @@ class Student extends Person {
 // Sample Input
 const student = new Student("Alice", 20, "A");
 
-// Sample Output
 const output6 = student.getDetails();
 // console.log( output6);
 
@@ -233,19 +232,41 @@ const output6 = student.getDetails();
 
 // =========================== solution-7 ===========================
 
+const getIntersection = (array1: number[], array2: number[]) => {
 
+    // Step 1: Validate inputs
+    if (!Array.isArray(array1) || !Array.isArray(array2)) {
+        throw new Error("Both inputs must be arrays");
+    }
 
+    for (const item of array1) {
+        if (typeof item !== "number") {
+            throw new Error("All elements in array1 must be numbers");
+        }
+    }
 
+    for (const item of array2) {
+        if (typeof item !== "number") {
+            throw new Error("All elements in array2 must be numbers");
+        }
+    }
 
+    // Step 2: Main logic
+    let commonNumber: number[] = [];
 
+    for (const item of array1) {
+        if (array2.includes(item)) {
+            commonNumber.push(item);
+        }
+    }
 
+    return commonNumber;
+}
 
+// Sample Input:
+const output7 = getIntersection([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]);
 
-
-
-
-
-
+// console.log(output7);
 
 
 
