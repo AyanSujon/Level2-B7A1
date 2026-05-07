@@ -22,7 +22,7 @@ const filterEvenNumbers = (array: number[]) => {
     return approvedNumbers
 
 };
-const output = filterEvenNumbers([1, 2, 3, 4, 5, 6])
+const output1 = filterEvenNumbers([1, 2, 3, 4, 5, 6])
 
 // console.log(output);
 
@@ -30,9 +30,25 @@ const output = filterEvenNumbers([1, 2, 3, 4, 5, 6])
 
 
 
-
 // =========================== solution-2 ===========================
 
+const reverseString = (input: string) => {
+    if (typeof input !== "string") {
+        throw new Error("Input must be a string");
+    }
+
+    let reversedString: string = "";
+
+    for (let i = input.length - 1; i >= 0; i--) {
+        reversedString += input[i];
+    }
+    return reversedString;
+
+}
+
+const output2 = reverseString("typescript")
+
+// console.log(output2);
 
 
 
@@ -40,14 +56,7 @@ const output = filterEvenNumbers([1, 2, 3, 4, 5, 6])
 
 
 
-
-
-
-
-
-
-
-
+// =========================== solution-2 ===========================
 
 
 
