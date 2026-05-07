@@ -32,7 +32,7 @@ const output1 = filterEvenNumbers([1, 2, 3, 4, 5, 6])
 
 // =========================== solution-2 ===========================
 
-const reverseString = (input: string) => {
+const reverseString = (input: string): string => {
     if (typeof input !== "string") {
         throw new Error("Input must be a string");
     }
@@ -60,7 +60,7 @@ const output2 = reverseString("typescript")
 
 type StringOrNumber = string | number;
 
-const checkType = (input: StringOrNumber): "String" | "Number" =>{
+const checkType = (input: StringOrNumber): string =>{
     if(typeof input === "string"){
         return "String";
     }
@@ -70,7 +70,7 @@ const checkType = (input: StringOrNumber): "String" | "Number" =>{
 throw new Error("Invalid input");
 
 }
-const output3 = checkType(56); // "String"
+const output3 = checkType("Hello"); // "String"
 // console.log(output3); 
 
 
@@ -113,6 +113,27 @@ function getProperty<ObjectType, KeyType extends keyof ObjectType>(
 const user = { id: 1, name: "John Doe", age: 21 };
 
 const output4 = getProperty(user, "name") // "John Doe"
-console.log(output4); 
+// console.log(output4); 
+
+
+
+
+
+
+
+
+
+
+// =========================== solution-5 ===========================
+
+
+
+
+
+
+
+
+
+
 
 
