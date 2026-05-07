@@ -83,16 +83,3 @@ Create a function `getIntersection` that returns common elements between two num
 - Data comparison
 
 ---
-
-## 📁 Submission Requirement
-- All solutions must be written in a single file: `solutions.ts`
-
----
-
-## 🎯 Learning Outcomes
-By completing this assignment, you will gain hands-on experience in:
-- Type-safe programming with TypeScript
-- Functional and object-oriented programming
-- Reusable and generic code design
-- Real-world problem-solving techniques
-```
