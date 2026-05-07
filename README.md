@@ -83,3 +83,9 @@ Create a function `getIntersection` that returns common elements between two num
 - Data comparison
 
 ---
+
+
+Blog Topics Covered:
+1. Why is any labeled a "type safety hole," and why is unknown the safer choice for handling unpredictable data? Explain the concept of type narrowing.
+
+2. How do Pick and Omit utility types prevent code duplication while creating specialized "slices" of a master interface? Discuss how this keeps your code DRY (Don't Repeat Yourself).
