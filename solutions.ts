@@ -1,9 +1,56 @@
-// Problem 1:
-// Create a TypeScript function filterEvenNumbers that accepts an array of numbers and returns a new array containing only the even numbers.
 
-// Sample Input:
-// filterEvenNumbers([1, 2, 3, 4, 5, 6])
+// =========================== solution-1 ===========================
 
-// Sample Output:
-// [2, 4, 6]
+
+const filterEvenNumbers = (array: number[]) => {
+
+    if (!Array.isArray(array)) {
+        throw new Error("Input must be an array of numbers");
+    }
+    const approvedNumbers: number[] = [];
+    for (const item of array) {
+        const number = Number(item);
+
+        if (isNaN(number)) {
+            throw new Error("All elements must be valid numbers");
+        }
+
+        if (number % 2 === 0) {
+            approvedNumbers.push(number)
+        }
+    }
+    return approvedNumbers
+
+};
+const output = filterEvenNumbers([1, 2, 3, 4, 5, 6])
+
+// console.log(output);
+
+
+
+
+
+
+// =========================== solution-2 ===========================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
